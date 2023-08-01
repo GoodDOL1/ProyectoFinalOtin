@@ -1,0 +1,56 @@
+{% extends "Worldtech/base_navbar.html" %}
+
+{% load static %}
+
+{% block principal %}
+
+
+<main role="main" class="inner cover">
+    <div style="margin-top:40px">
+        <br>
+        <center><img src="{% static 'Worldtech/assets/img/eliminar-mensaje.jpg' %}" alt="centered image" height="540" width="1200" style="border-radius: 2em;"> </center>
+
+        <br>
+
+        <br>
+
+        <br>
+
+        <hr class="featurette-divider">
+       
+        <br>
+
+        <div class="d-flex justify-content-center">
+            <div class="col-md-8" >
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                    
+                        <div class="card-text">
+
+                            <P> Asunto: {{ mensaje.asunto }}</P>
+                            
+                            <div class="text-right">
+                                <p>Estas seguro de querer borrar el mensaje de {{mensaje.nombre}} - {{mensaje.email}} ?</p>
+                                
+                                
+                                <form method="post" style="right: auto;">
+                                    {% csrf_token %}
+                        
+                                    {{form.as_p}}
+                        
+                                    <input class = "btn btn-danger" type="submit" value="Eliminar">
+                                    <a class="btn btn-primary" href="{% url 'lista-mensajes' %}">Cancelar</a>
+                        
+                        
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+</main>
+
+{% endblock %}

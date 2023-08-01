@@ -1,0 +1,57 @@
+{% extends "Worldtech/base_navbar.html" %}
+
+{% load static %}
+
+{% block principal %}
+
+
+<main role="main" class="inner cover">
+    <div style="margin-top:40px">
+        <br>
+        <center><img src="{% static 'Worldtech/assets/img/actualizar.jpg' %}" alt="centered image" height="540" width="1200" style="border-radius: 2em;"> </center>
+
+        <br>
+
+        <br>
+
+        <br>
+
+            <hr class="featurette-divider">
+       
+        <br>
+        
+        <div class="d-flex justify-content-center">
+            <div class="col col-6" style="text-align: left;">
+
+                <h4> Formulario de actualizacion de Publicacion</h4>
+                <P>En la vista esquematica se observa la ubicacion de cada campo</P>
+                
+                <br>
+                <br>
+                <br>
+
+                <form method="post" enctype = "multipart/form-data">
+                    {% csrf_token %}
+
+                    {{form.as_p}}
+                    
+                    <input type="reset" value = "Borrar campos">
+                    <input type="submit" value="Actualizar Publicacion">
+
+
+                </form> 
+            </div>
+
+            <div class="col col-6" style="text-align: center;">
+                <h4> Vista esquematica de ubicacion de cada campo</h4>
+                <P>Cada campo rellenado a actualizar se puede visualizar en este esquema</P>
+                <img src="{% static 'Worldtech/assets/img/esquematica.png' %}" height="784" width="550">
+            </div>
+            
+        </div>
+        
+
+    </div>
+</main>
+
+{% endblock %}

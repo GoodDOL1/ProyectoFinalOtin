@@ -1,0 +1,83 @@
+{% extends "Worldtech/base_navbar.html" %}
+
+{% load static %}
+
+{% block principal %}
+
+
+
+<main role="main" class="inner cover">
+    <div style="margin-top:40px">
+        <br>
+        <center><img src="{% static 'Worldtech/assets/img/buscar.jpg' %}" alt="centered image" height="540" width="1200" style="border-radius: 2em;"> </center>
+
+        <br>
+
+        <br>
+
+        <br>
+
+        <hr class="featurette-divider">
+       
+        <br>
+
+        {% if articulos %}
+        {% for articulo in articulos %}
+        <div class="d-flex justify-content-center">
+            <div class="col-md-8" >
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">                    
+
+                        <div class="card-text">
+
+                            <img class="card-img" src="{{ articulo.imagen_principal_url }}" data-holder-rendered="true" style="height: 150px; width: 25%;">
+
+
+                            {{articulo.id}} - {{articulo.titulo_articulo}} - {{articulo.breve_descripcion}}
+                
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                
+                                <a class="btn btn-sm btn-outline-secondary" href="{% url 'detalle-articulo' articulo.id %}">Detalle</a>
+                                {% if user.is_authenticated and user.id == articulo.autor.id %}
+
+                                <a class="btn btn-sm btn-outline-secondary" href="{% url 'actualizar-articulo' articulo.id %}">Actualizar</a>
+                                <a class="btn btn-sm btn-outline-secondary" href="{% url 'eliminar-articulo' articulo.id %}">Eliminar</a>
+
+                                {% endif %}
+                            </div>
+
+                            <small class="text-muted">
+                                Autor: {{ articulo.autor }}<br>
+                                Fecha: {{ articulo.fecha_de_creacion }}
+                            </small>
+                        </div>
+                        
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% else %}
+
+        <div class="inner cover-container">
+            <div class="flexbox-container">
+                <div style="border-radius: 1em; background-color: rgb(87, 89, 97); text-align: center; padding-left: 5em; padding-right: 5em; padding-top: 1.5em; padding-bottom: 2.5em;">
+                    <br>
+                    <h4>No se ha encontrado ninguna coincidencia</h4>
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+        
+
+    </div>
+</main>
+
+{% endblock %}

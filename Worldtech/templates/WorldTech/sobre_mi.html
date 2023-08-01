@@ -1,0 +1,109 @@
+{% extends "Worldtech/base_navbar.html" %}
+
+{% load static %}
+
+{% block principal %}
+
+<br>
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+    <div class="col col-4" style="text-align: center;">
+
+        <img width ="200px" style="border-radius: 1em;" src="{% static 'Worldtech/assets/img/yo.jpg' %}" alt="centered image" >
+
+    </div>
+
+    <div class="col col-4" style="text-align: left;">
+
+        <h3 class="mt-5">Sobre mí</h3>
+            <p class="lead" style="text-align: left;">
+              Me llamo Damian Otin. Soy de Mendoza Argentina. Tomo la Programación como Hobby
+              Los últimos meses he tenido una cantidad de tiempo mínima para ponerme debido al trabajo, pero aún así le pongo onda.
+              Espero que esté bien c:
+
+            </p>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container marketing">
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <br>
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Otros hobbies <span class="text-muted">Lectura y escritura</span></h2>
+        <br>
+        <p class="lead">
+           Desde pequeño siempre me fascinó la fantasía y quise escribir mi propio libro.
+           El sueño todavía no se ha cumplido, pero tengo esperanza.
+           Mientras tanto intento dedicarme a otros hobbies. con suerte, Algún día podré hacer todo lo que me guste.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" style="border-radius: 1em; width: 500px;" src="{% static 'Worldtech/assets/img/mistborn' %}" data-src="holder.js/500x500/auto" alt="500x500" data-holder-rendered="true">
+      </div>
+    </div>
+
+    <br>
+
+    <hr class="featurette-divider">
+   
+    <br>
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading"> Juegos
+        <br>
+        <p class="lead">
+            Tambien me apasionan los videojuegos.
+            Parte de mi estudio de Python es porque quiero saber cómo son creados.
+            Ahora que entiendo que todo son una serie de órdenes, puedo jugar y pensar qué tipos de matrices o variables se usan para crear mis juegos favoritos.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" style="border-radius: 1em; width: 500px;" src="{% static 'Worldtech/assets/img/Gamer.jpg' %}" data-src="holder.js/500x500/auto" alt="500x500" data-holder-rendered="true">
+      </div>
+    </div>
+
+    <br>
+
+    <hr class="featurette-divider">
+
+    <br>
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Juegos de Rol <span class="text-muted">Libera tu imaginacion.</span></h2>
+        <br>
+        <p class="lead">
+            Me dedico tambien a jugar juegos de rol con mis amigos.
+            Básicamente sirven para contar historias compartidas. Lo cual es nuestro evento social semanal.
+            Honestamente es lo que más me apasiona y podría hablar por horas del tema n.n
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" style="border-radius: 1em; width: 500px;" src="{% static 'Worldtech/assets/img/dnd.jpg' %}" data-src="holder.js/500x500/auto" alt="500x500"  data-holder-rendered="true">
+      </div>
+    </div>
+    <br>
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div>
+
+
+{% endblock %}
