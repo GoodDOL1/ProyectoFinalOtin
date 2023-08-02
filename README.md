@@ -1,8 +1,10 @@
 # ProyectoFinalOtin
 Alumno: Damián Otín
-Video:
+
 Nombre de Admin: admin
+
 Contraseña de Admin: abbc123
+
 Video: https://drive.google.com/drive/folders/17UAMGhRi6TdjG3X1E1oODlyOyK06u79O?usp=sharing
 
 Contenido de la pagina web
